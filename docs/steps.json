@@ -1,0 +1,218 @@
+[
+  {
+    "order": 1,
+    "title": "Place the breadboard",
+    "description": "The solderless breadboard is the foundation of the circuit. It provides the electrical connectivity for all components through its internal metal clips. Placing it first ensures you have a stable workspace to organize the Arduino and wiring later.",
+    "instructions": "Pick up the full-size breadboard and place it on your work surface. Orient it so the longer side is facing you and the power rails (the side strips) are at the top and bottom. Ensure the notch at the top of the board is facing away from you. The board is now ready for component placement.",
+    "components": [],
+    "holes": [],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [],
+    "notes": "The breadboard has a center gap between columns e and f. The left bank (columns a-e) and the right bank (columns f-j) are electrically isolated from each other in the same row, but connected vertically within each bank."
+  },
+  {
+    "order": 2,
+    "title": "Place the Arduino Uno",
+    "description": "The Arduino Uno acts as the microcontroller brain of the project. It provides the digital pins (D2, D3, D4) to drive the LEDs and the GND pin to complete the circuit's return path. Positioning it here allows easy access to the headers for wiring.",
+    "instructions": "Pick up the Arduino Uno board. Align the USB port on the left side of the board with the left edge of the breadboard. Place the Arduino so that the USB port is near the top-left corner of the breadboard. The USB port should be on the same side as the breadboard's power rails.",
+    "components": [
+      "arduino_1"
+    ],
+    "holes": [],
+    "highlightComponents": [
+      "arduino_1"
+    ],
+    "highlightPins": [],
+    "wires": [],
+    "notes": "The Arduino sits flat on the breadboard. Ensure no components are placed underneath it before powering it on."
+  },
+  {
+    "order": 3,
+    "title": "Wire the power rails",
+    "description": "Connecting the power rails establishes the common ground for the entire circuit. This allows the LEDs to share a return path to the Arduino's ground pin, which is necessary for the logic to function correctly.",
+    "instructions": "Take a black jumper wire and connect one end to the Arduino's GND pin. Connect the other end to the top negative rail of the breadboard (hole rail_top_negative_1). The black wire now provides the ground reference for the entire traffic light system.",
+    "components": [],
+    "holes": [
+      "rail_top_negative_1"
+    ],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [
+      {
+        "from": "we_arduino_1_GND",
+        "to": "we_bb_1_rail_top_negative_1",
+        "color": "black"
+      }
+    ],
+    "notes": "Always connect the ground (GND) first to avoid accidental shorts when adding other wires."
+  },
+  {
+    "order": 4,
+    "title": "Place the red LED and resistor",
+    "description": "The red LED and its 220Ω resistor form the first traffic light signal. The resistor acts as a current limiter, preventing the LED from burning out by restricting the current to a safe ~15 mA. It is placed in the left bank of the breadboard to keep the signal path organized.",
+    "instructions": "Insert the red LED into the breadboard. Place the anode (longer leg) into hole 10a and the cathode (shorter leg) into hole 11a. The anode connects to the signal wire, and the cathode connects to the resistor. Next, insert the 220Ω resistor into the left bank. Place pin1 into hole 11e and pin2 into hole 15e.",
+    "components": [
+      "led_red",
+      "r_red"
+    ],
+    "holes": [
+      "10a",
+      "11a",
+      "11e",
+      "15e"
+    ],
+    "highlightComponents": [
+      "led_red",
+      "r_red"
+    ],
+    "highlightPins": [
+      "anode",
+      "cathode",
+      "pin1",
+      "pin2"
+    ],
+    "wires": [],
+    "notes": "Check the LED orientation: the longer leg (anode) goes into 10a, and the shorter leg (cathode) goes into 11a."
+  },
+  {
+    "order": 5,
+    "title": "Wire the red LED circuit",
+    "description": "This step completes the red LED circuit. The black wire connects the resistor to the ground rail, and the white wire connects the Arduino's D2 pin to the LED's anode. This establishes the path for current to flow when the Arduino outputs a HIGH signal.",
+    "instructions": "Take a black jumper wire and connect it from the breadboard hole 15a (the free end of the red resistor) to the top negative rail (rail_top_negative_2). Then, take a white jumper wire and connect it from the Arduino pin D2 to the breadboard hole 10b (the LED anode).",
+    "components": [],
+    "holes": [
+      "15a",
+      "rail_top_negative_2",
+      "D2",
+      "10b"
+    ],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [
+      {
+        "from": "we_r_red_pin2",
+        "to": "we_bb_1_rail_top_negative_2",
+        "color": "black"
+      },
+      {
+        "from": "we_arduino_1_D2",
+        "to": "we_led_red_anode",
+        "color": "white"
+      }
+    ],
+    "notes": "The white wire carries the control signal from the Arduino to the LED."
+  },
+  {
+    "order": 6,
+    "title": "Place the yellow LED and resistor",
+    "description": "The yellow LED and its 220Ω resistor form the second traffic light signal. Similar to the red LED, the resistor limits the current to ensure the LED operates within its safe range. This setup mirrors the red LED configuration but uses different pins.",
+    "instructions": "Insert the yellow LED into the breadboard. Place the anode (longer leg) into hole 19a and the cathode (shorter leg) into hole 20a. Next, insert the 220Ω resistor into the left bank. Place pin1 into hole 20e and pin2 into hole 24e.",
+    "components": [
+      "led_yellow",
+      "r_yellow"
+    ],
+    "holes": [
+      "19a",
+      "20a",
+      "20e",
+      "24e"
+    ],
+    "highlightComponents": [
+      "led_yellow",
+      "r_yellow"
+    ],
+    "highlightPins": [
+      "anode",
+      "cathode",
+      "pin1",
+      "pin2"
+    ],
+    "wires": [],
+    "notes": "Verify the LED orientation: anode at 19a, cathode at 20a."
+  },
+  {
+    "order": 7,
+    "title": "Wire the yellow LED circuit",
+    "description": "This step completes the yellow LED circuit. The black wire connects the resistor to the ground rail, and the white wire connects the Arduino's D3 pin to the LED's anode. This establishes the path for the yellow light to turn on.",
+    "instructions": "Take a black jumper wire and connect it from the breadboard hole 24a (the free end of the yellow resistor) to the top negative rail (rail_top_negative_3). Then, take a white jumper wire and connect it from the Arduino pin D3 to the breadboard hole 19b (the LED anode).",
+    "components": [],
+    "holes": [
+      "24a",
+      "rail_top_negative_3",
+      "D3",
+      "19b"
+    ],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [
+      {
+        "from": "we_r_yellow_pin2",
+        "to": "we_bb_1_rail_top_negative_3",
+        "color": "black"
+      },
+      {
+        "from": "we_arduino_1_D3",
+        "to": "we_led_yellow_anode",
+        "color": "white"
+      }
+    ],
+    "notes": "The white wire carries the control signal from the Arduino to the yellow LED."
+  },
+  {
+    "order": 8,
+    "title": "Place the green LED and resistor",
+    "description": "The green LED and its 220Ω resistor form the third traffic light signal. This completes the three-color sequence (Red, Yellow, Green). The resistor ensures the green LED receives a safe amount of current.",
+    "instructions": "Insert the green LED into the breadboard. Place the anode (longer leg) into hole 28a and the cathode (shorter leg) into hole 29a. Next, insert the 220Ω resistor into the left bank. Place pin1 into hole 29e and pin2 into hole 33e.",
+    "components": [
+      "led_green",
+      "r_green"
+    ],
+    "holes": [
+      "28a",
+      "29a",
+      "29e",
+      "33e"
+    ],
+    "highlightComponents": [
+      "led_green",
+      "r_green"
+    ],
+    "highlightPins": [
+      "anode",
+      "cathode",
+      "pin1",
+      "pin2"
+    ],
+    "wires": [],
+    "notes": "Check the LED orientation: anode at 28a, cathode at 29a."
+  },
+  {
+    "order": 9,
+    "title": "Wire the green LED circuit",
+    "description": "This step completes the green LED circuit. The black wire connects the resistor to the ground rail, and the orange wire connects the Arduino's D4 pin to the LED's anode. This establishes the path for the green light to turn on.",
+    "instructions": "Take a black jumper wire and connect it from the breadboard hole 33a (the free end of the green resistor) to the top negative rail (rail_top_negative_4). Then, take an orange jumper wire and connect it from the Arduino pin D4 to the breadboard hole 28b (the LED anode).",
+    "components": [],
+    "holes": [
+      "33a",
+      "rail_top_negative_4",
+      "D4",
+      "28b"
+    ],
+    "highlightComponents": [],
+    "highlightPins": [],
+    "wires": [
+      {
+        "from": "we_r_green_pin2",
+        "to": "we_bb_1_rail_top_negative_4",
+        "color": "black"
+      },
+      {
+        "from": "we_arduino_1_D4",
+        "to": "we_led_green_anode",
+        "color": "orange"
+      }
+    ],
+    "notes": "The orange wire carries the control signal from the Arduino to the green LED."
+  }
+]

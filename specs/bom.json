@@ -1,0 +1,44 @@
+[
+  {
+    "componentId": "arduino-uno",
+    "name": "Arduino Uno",
+    "quantity": 1,
+    "specs": "Board"
+  },
+  {
+    "componentId": "breadboard-full",
+    "name": "Breadboard",
+    "quantity": 1,
+    "specs": "Full size"
+  },
+  {
+    "componentId": "led-red",
+    "name": "LED (Red)",
+    "quantity": 1,
+    "specs": "5mm"
+  },
+  {
+    "componentId": "led-yellow",
+    "name": "LED (Yellow)",
+    "quantity": 1,
+    "specs": "5mm"
+  },
+  {
+    "componentId": "led-green",
+    "name": "LED (Green)",
+    "quantity": 1,
+    "specs": "5mm"
+  },
+  {
+    "componentId": "resistor-220",
+    "name": "Resistor (220 Ohm)",
+    "quantity": 3,
+    "specs": "220 Ohm"
+  },
+  {
+    "componentId": "wire",
+    "name": "Jumper Wire",
+    "quantity": 7,
+    "specs": "Assorted colors (White, Orange, Black)"
+  }
+]

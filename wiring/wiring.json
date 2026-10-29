@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "parts": [
+    {
+      "id": "bb_1",
+      "type": "breadboard-full",
+      "parentId": null,
+      "terminals": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "arduino_1",
+      "type": "arduino-uno",
+      "parentId": null,
+      "terminals": [],
+      "position": {
+        "x": -0.09,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "led_red",
+      "type": "led-red",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "anode",
+          "connection": "10a"
+        },
+        {
+          "name": "cathode",
+          "connection": "11a"
+        }
+      ]
+    },
+    {
+      "id": "r_red",
+      "type": "resistor-330",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "pin1",
+          "connection": "11e"
+        },
+        {
+          "name": "pin2",
+          "connection": "15e"
+        }
+      ]
+    },
+    {
+      "id": "led_yellow",
+      "type": "led-yellow",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "anode",
+          "connection": "19a"
+        },
+        {
+          "name": "cathode",
+          "connection": "20a"
+        }
+      ]
+    },
+    {
+      "id": "r_yellow",
+      "type": "resistor-330",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "pin1",
+          "connection": "20e"
+        },
+        {
+          "name": "pin2",
+          "connection": "24e"
+        }
+      ]
+    },
+    {
+      "id": "led_green",
+      "type": "led-green",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "anode",
+          "connection": "28a"
+        },
+        {
+          "name": "cathode",
+          "connection": "29a"
+        }
+      ]
+    },
+    {
+      "id": "r_green",
+      "type": "resistor-330",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "pin1",
+          "connection": "29e"
+        },
+        {
+          "name": "pin2",
+          "connection": "33e"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D2",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D2"
+        }
+      ]
+    },
+    {
+      "id": "we_led_red_anode",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "10b"
+        }
+      ]
+    },
+    {
+      "id": "we_r_red_pin2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "15a"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_1",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_1"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D3",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D3"
+        }
+      ]
+    },
+    {
+      "id": "we_led_yellow_anode",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "19b"
+        }
+      ]
+    },
+    {
+      "id": "we_r_yellow_pin2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "24a"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_2"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_D4",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "D4"
+        }
+      ]
+    },
+    {
+      "id": "we_led_green_anode",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "28b"
+        }
+      ]
+    },
+    {
+      "id": "we_r_green_pin2",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "33a"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_3",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_3"
+        }
+      ]
+    },
+    {
+      "id": "we_bb_1_rail_top_negative_4",
+      "type": "wire-end",
+      "parentId": "bb_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "rail_top_negative_4"
+        }
+      ]
+    },
+    {
+      "id": "we_arduino_1_GND",
+      "type": "wire-end",
+      "parentId": "arduino_1",
+      "terminals": [
+        {
+          "name": "t1",
+          "connection": "GND"
+        }
+      ]
+    }
+  ],
+  "wires": [
+    {
+      "id": "w_1",
+      "color": "red",
+      "from": "we_arduino_1_D2",
+      "to": "we_led_red_anode"
+    },
+    {
+      "id": "w_3",
+      "color": "blue",
+      "from": "we_r_red_pin2",
+      "to": "we_bb_1_rail_top_negative_1"
+    },
+    {
+      "id": "w_4",
+      "color": "yellow",
+      "from": "we_arduino_1_D3",
+      "to": "we_led_yellow_anode"
+    },
+    {
+      "id": "w_6",
+      "color": "purple",
+      "from": "we_r_yellow_pin2",
+      "to": "we_bb_1_rail_top_negative_2"
+    },
+    {
+      "id": "w_7",
+      "color": "green",
+      "from": "we_arduino_1_D4",
+      "to": "we_led_green_anode"
+    },
+    {
+      "id": "w_9",
+      "color": "orange",
+      "from": "we_r_green_pin2",
+      "to": "we_bb_1_rail_top_negative_3"
+    },
+    {
+      "id": "w_10",
+      "color": "black",
+      "from": "we_bb_1_rail_top_negative_4",
+      "to": "we_arduino_1_GND"
+    }
+  ]
+}
